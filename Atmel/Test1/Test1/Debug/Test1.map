@@ -1974,31 +1974,31 @@ END GROUP
  .debug_frame   0x0000076c      0x3d0 src/ASF/xmega/drivers/usb/usb_device.o
  .debug_frame   0x00000b3c       0xa4 src/main.o
 
-.debug_str      0x00000000    0x2ead4
+.debug_str      0x00000000    0x2eb15
  *(.debug_str)
- .debug_str     0x00000000    0x291f0 src/ASF/common/services/usb/class/hid/device/generic/example/atxmega32a4u_stk600-rc044x/ui.o
-                              0x298e9 (size before relaxing)
- .debug_str     0x000291f0      0x7f2 src/ASF/common/services/clock/xmega/sysclk.o
+ .debug_str     0x00000000    0x29208 src/ASF/common/services/usb/class/hid/device/generic/example/atxmega32a4u_stk600-rc044x/ui.o
+                              0x29901 (size before relaxing)
+ .debug_str     0x00029208      0x81b src/ASF/common/services/clock/xmega/sysclk.o
                               0x2677b (size before relaxing)
- .debug_str     0x000299e2       0x41 src/ASF/common/services/ioport/xmega/ioport_compat.o
+ .debug_str     0x00029a23       0x41 src/ASF/common/services/ioport/xmega/ioport_compat.o
                               0x24f90 (size before relaxing)
- .debug_str     0x00029a23       0x96 src/ASF/common/services/sleepmgr/xmega/sleepmgr.o
+ .debug_str     0x00029a64       0x96 src/ASF/common/services/sleepmgr/xmega/sleepmgr.o
                               0x24dc4 (size before relaxing)
- .debug_str     0x00029ab9      0x40b src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.o
+ .debug_str     0x00029afa      0x40b src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.o
                               0x27549 (size before relaxing)
- .debug_str     0x00029ec4      0x4ce src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic_desc.o
+ .debug_str     0x00029f05      0x4ce src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic_desc.o
                               0x27457 (size before relaxing)
- .debug_str     0x0002a392      0x220 src/ASF/common/services/usb/class/hid/device/udi_hid.o
+ .debug_str     0x0002a3d3      0x220 src/ASF/common/services/usb/class/hid/device/udi_hid.o
                               0x27340 (size before relaxing)
- .debug_str     0x0002a5b2      0x6f0 src/ASF/common/services/usb/udc/udc.o
+ .debug_str     0x0002a5f3      0x6f0 src/ASF/common/services/usb/udc/udc.o
                               0x27aed (size before relaxing)
- .debug_str     0x0002aca2       0x4f src/ASF/xmega/boards/stk600/rc044x/init.o
+ .debug_str     0x0002ace3       0x4f src/ASF/xmega/boards/stk600/rc044x/init.o
                               0x25af3 (size before relaxing)
- .debug_str     0x0002acf1      0x587 src/ASF/xmega/drivers/nvm/nvm.o
+ .debug_str     0x0002ad32      0x587 src/ASF/xmega/drivers/nvm/nvm.o
                               0x254f2 (size before relaxing)
- .debug_str     0x0002b278     0x3753 src/ASF/xmega/drivers/usb/usb_device.o
+ .debug_str     0x0002b2b9     0x3753 src/ASF/xmega/drivers/usb/usb_device.o
                               0x2c918 (size before relaxing)
- .debug_str     0x0002e9cb      0x109 src/main.o
+ .debug_str     0x0002ea0c      0x109 src/main.o
                               0x2961a (size before relaxing)
 
 .debug_loc      0x00000000     0x3960
