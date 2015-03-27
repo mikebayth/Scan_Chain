@@ -61,7 +61,7 @@ begin  -- behave
   reset <= dut_in(0);
   
   LED(5 downto 0) <= dut_out(5 downto 0);
-  LED(6) <= dut_in(1);
-  LED(7) <= dummy_clk;
+  LED(6) <= dut_in(0);
+  LED(7) <= dut_in(1);
 end behave;
 

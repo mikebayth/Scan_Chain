@@ -60,7 +60,7 @@ begin	--behave
 	In_Reg  : Scan_reg generic map (in_pins) port map (TCLK, TRST, std_logic_vector(to_unsigned(0, in_pins)), dut_in, TDI, connct_reg, L1_en, L2_en, cap_shft, sel_reg);
 	Out_Reg : Scan_reg generic map (out_pins) port map (TCLK, TRST, dut_out_reverse, open, connct_reg, TDO, L1_en, L2_en, cap_shft, sel_reg);
 
-	TAP_Controller : process(TCLK, TRST)
+	TAP_Controller : process(TCLK, TRST, TMS)
 	variable next_state : MyState;
 	begin
 		if TRST = '1' then

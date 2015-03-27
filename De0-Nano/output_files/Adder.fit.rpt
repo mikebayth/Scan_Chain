@@ -1,5 +1,5 @@
 Fitter report for Adder
-Tue Mar 24 15:50:02 2015
+Fri Mar 27 01:44:31 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 24 15:50:02 2015      ;
+; Fitter Status                      ; Successful - Fri Mar 27 01:44:31 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Adder                                      ;
 ; Top-level Entity Name              ; Adder                                      ;
@@ -211,7 +211,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/titto/Desktop/De0-Nano/output_files/Adder.pin.
+The pin-out file can be found in /home/titto/Desktop/Scan_Chain/De0-Nano/output_files/Adder.pin.
 
 
 +---------------------------------------------------------------------+
@@ -700,9 +700,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED[5]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LED[6]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LED[7]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; TCLK     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; TMS      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; TRST     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; TCLK     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; TRST     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; TDI      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -713,36 +713,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                         ; Pad To Core Index ; Setting ;
 +-------------------------------------------------------------+-------------------+---------+
 ; clock_50                                                    ;                   ;         ;
-; TCLK                                                        ;                   ;         ;
 ; TMS                                                         ;                   ;         ;
+;      - Scan_Chain:SC|Selector4~0                            ; 1                 ; 6       ;
 ;      - Scan_Chain:SC|Selector1~0                            ; 1                 ; 6       ;
 ;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]~1               ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Selector4~0                            ; 1                 ; 6       ;
-;      - Scan_Chain:SC|\TAP_Controller:next_state.s_capture~0 ; 1                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1                ; 1                 ; 6       ;
 ;      - Scan_Chain:SC|\TAP_Controller:next_state.s_update~0  ; 1                 ; 6       ;
 ;      - Scan_Chain:SC|Selector0~0                            ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1                ; 1                 ; 6       ;
+;      - Scan_Chain:SC|\TAP_Controller:next_state.s_capture~0 ; 1                 ; 6       ;
 ;      - Scan_Chain:SC|\TAP_Controller:next_state.s_DR~0      ; 1                 ; 6       ;
+; TCLK                                                        ;                   ;         ;
 ; TRST                                                        ;                   ;         ;
-;      - Scan_Chain:SC|current_state.s_capture                ; 1                 ; 6       ;
-;      - Scan_Chain:SC|current_state.s_shift                  ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[1]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[2]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[3]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[4]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[5]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[6]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[7]                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|current_state.s_update                 ; 1                 ; 6       ;
-;      - Scan_Chain:SC|current_state.s_idle                   ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]~1               ; 1                 ; 6       ;
-;      - Scan_Chain:SC|current_state.s_DR                     ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2~0                   ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1                ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2~2                   ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L1~0                   ; 1                 ; 6       ;
-;      - Scan_Chain:SC|Scan_Reg:In_Reg|L1~1                   ; 1                 ; 6       ;
+;      - Scan_Chain:SC|current_state.s_idle                   ; 0                 ; 6       ;
+;      - Scan_Chain:SC|current_state.s_capture                ; 0                 ; 6       ;
+;      - Scan_Chain:SC|current_state.s_shift                  ; 0                 ; 6       ;
+;      - Scan_Chain:SC|current_state.s_update                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[1]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[2]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[3]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[4]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[5]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[6]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[7]                 ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]~1               ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2~0                   ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1                ; 0                 ; 6       ;
+;      - Scan_Chain:SC|current_state.s_DR                     ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L2~2                   ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L1~0                   ; 0                 ; 6       ;
+;      - Scan_Chain:SC|Scan_Reg:In_Reg|L1~1                   ; 0                 ; 6       ;
 ; TDI                                                         ;                   ;         ;
 ;      - Scan_Chain:SC|Scan_Reg:In_Reg|L1~1                   ; 0                 ; 6       ;
 +-------------------------------------------------------------+-------------------+---------+
@@ -753,10 +753,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                   ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1  ; LCCOMB_X35_Y33_N6  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0  ; LCCOMB_X35_Y33_N12 ; 8       ; Async. clear              ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]    ; LCCOMB_X35_Y33_N4  ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]~1 ; LCCOMB_X35_Y33_N8  ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1  ; LCCOMB_X34_Y30_N0  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0  ; LCCOMB_X34_Y30_N2  ; 8       ; Async. clear              ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]    ; LCCOMB_X34_Y30_N20 ; 8       ; Clock                     ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; Scan_Chain:SC|Scan_Reg:Out_Reg|L1[0]~1 ; LCCOMB_X34_Y30_N12 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; TCLK                                   ; PIN_D12            ; 17      ; Clock                     ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 ; TRST                                   ; PIN_A12            ; 19      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
@@ -767,8 +767,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                  ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0 ; LCCOMB_X35_Y33_N12 ; 8       ; 0                                    ; Global Clock         ; GCLK12           ; --                        ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]   ; LCCOMB_X35_Y33_N4  ; 8       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0 ; LCCOMB_X34_Y30_N2  ; 8       ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]   ; LCCOMB_X34_Y30_N20 ; 8       ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
 ; TCLK                                  ; PIN_D12            ; 17      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
 +---------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -790,15 +790,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Counter:DUT|cnt[1]                                   ; 4       ;
 ; Counter:DUT|cnt[0]                                   ; 4       ;
 ; Counter:DUT|cnt[6]                                   ; 3       ;
-; Scan_Chain:SC|current_state.s_update                 ; 3       ;
 ; Scan_Chain:SC|current_state.s_shift                  ; 3       ;
 ; Scan_Chain:SC|current_state.s_capture                ; 3       ;
 ; Counter:DUT|cnt[7]                                   ; 3       ;
+; Scan_Chain:SC|current_state.s_update                 ; 3       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L1[1]                  ; 2       ;
+; Scan_Chain:SC|current_state.s_DR                     ; 2       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]~1                ; 2       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L1[0]                  ; 2       ;
-; Scan_Chain:SC|current_state.s_DR                     ; 2       ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]                  ; 2       ;
 ; Scan_Chain:SC|Selector4~0                            ; 2       ;
 ; TDI~input                                            ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~8                  ; 1       ;
@@ -807,21 +806,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~5                  ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~4                  ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L1~1                   ; 1       ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|L1~0                   ; 1       ;
 ; Scan_Chain:SC|\TAP_Controller:next_state.s_DR~0      ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~3                  ; 1       ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|L1~0                   ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L2~2                   ; 1       ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|L2~0                   ; 1       ;
-; Scan_Chain:SC|Selector0~0                            ; 1       ;
-; Scan_Chain:SC|\TAP_Controller:next_state.s_update~0  ; 1       ;
 ; Scan_Chain:SC|\TAP_Controller:next_state.s_capture~0 ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~2                  ; 1       ;
+; Scan_Chain:SC|Selector0~0                            ; 1       ;
+; Scan_Chain:SC|\TAP_Controller:next_state.s_update~0  ; 1       ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|L2~0                   ; 1       ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]                  ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:In_Reg|L2[1]                  ; 1       ;
 ; Counter:DUT|cnt~0                                    ; 1       ;
 ; Counter:DUT|Equal0~1                                 ; 1       ;
 ; Counter:DUT|Equal0~0                                 ; 1       ;
-; Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]                  ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1~0                  ; 1       ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0                ; 1       ;
+; Scan_Chain:SC|Scan_Reg:In_Reg|L2[0]                  ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1[7]                 ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1[6]                 ; 1       ;
 ; Scan_Chain:SC|Scan_Reg:Out_Reg|L1[5]                 ; 1       ;
@@ -853,14 +854,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 29 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 3 / 2,597 ( < 1 % )   ;
-; C4 interconnects      ; 14 / 46,848 ( < 1 % ) ;
-; Direct links          ; 4 / 71,559 ( < 1 % )  ;
+; Block interconnects   ; 28 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 4 / 2,597 ( < 1 % )   ;
+; C4 interconnects      ; 29 / 46,848 ( < 1 % ) ;
+; Direct links          ; 1 / 71,559 ( < 1 % )  ;
 ; Global clocks         ; 3 / 20 ( 15 % )       ;
-; Local interconnects   ; 27 / 24,624 ( < 1 % ) ;
-; R24 interconnects     ; 9 / 2,496 ( < 1 % )   ;
-; R4 interconnects      ; 35 / 62,424 ( < 1 % ) ;
+; Local interconnects   ; 28 / 24,624 ( < 1 % ) ;
+; R24 interconnects     ; 10 / 2,496 ( < 1 % )  ;
+; R4 interconnects      ; 33 / 62,424 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -878,9 +879,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 3                           ;
-; 12                                          ; 0                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 1                           ;
+; 12                                          ; 1                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
@@ -891,11 +892,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 3) ;
+; LAB-wide Signals  (Average = 2.33) ; Number of LABs  (Total = 3) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 2                           ;
 ; 1 Clock                            ; 3                           ;
 ; 1 Clock enable                     ; 1                           ;
+; 1 Sync. clear                      ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
@@ -922,10 +924,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 15                                           ; 0                           ;
 ; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 1                           ;
-; 19                                           ; 1                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 1                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 2                           ;
+; 20                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1039,8 +1040,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED[5]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LED[6]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LED[7]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; TCLK               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; TMS                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; TCLK               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; TRST               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; TDI                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -1119,9 +1120,10 @@ Info (176353): Automatically promoted node Scan_Chain:SC|Scan_Reg:In_Reg|PO[1]
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node LED[6]~output
-        Info (176357): Destination node LED[7]~output
 Info (176353): Automatically promoted node Scan_Chain:SC|Scan_Reg:In_Reg|PO[0]~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node LED[7]~output
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1133,7 +1135,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X32_Y23 to location X42_Y34
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X21_Y23 to location X31_Y34
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1144,17 +1146,17 @@ Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /home/titto/Desktop/De0-Nano/output_files/Adder.fit.smsg
+Info (144001): Generated suppressed messages file /home/titto/Desktop/Scan_Chain/De0-Nano/output_files/Adder.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 858 megabytes
-    Info: Processing ended: Tue Mar 24 15:50:02 2015
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 853 megabytes
+    Info: Processing ended: Fri Mar 27 01:44:32 2015
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/titto/Desktop/De0-Nano/output_files/Adder.fit.smsg.
+The suppressed messages can be found in /home/titto/Desktop/Scan_Chain/De0-Nano/output_files/Adder.fit.smsg.
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Adder
-Tue Mar 24 15:49:53 2015
+Fri Mar 27 01:44:22 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -19,10 +19,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  11. Parameter Settings for User Entity Instance: Scan_Chain:SC
  12. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:In_Reg
  13. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:Out_Reg
- 14. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:Out_Reg"
- 15. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:In_Reg"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "Counter:DUT"
+ 15. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:Out_Reg"
+ 16. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:In_Reg"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -48,7 +49,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 24 15:49:53 2015      ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 27 01:44:22 2015      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Adder                                      ;
 ; Top-level Entity Name              ; Adder                                      ;
@@ -163,16 +164,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; Scan_Reg.vhd                     ; yes             ; User VHDL File  ; /home/titto/Desktop/De0-Nano/Scan_Reg.vhd   ;         ;
-; Scan_Chain.vhd                   ; yes             ; User VHDL File  ; /home/titto/Desktop/De0-Nano/Scan_Chain.vhd ;         ;
-; Counter.vhd                      ; yes             ; User VHDL File  ; /home/titto/Desktop/De0-Nano/Counter.vhd    ;         ;
-; Adder.vhd                        ; yes             ; User VHDL File  ; /home/titto/Desktop/De0-Nano/Adder.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; Scan_Reg.vhd                     ; yes             ; User VHDL File  ; /home/titto/Desktop/Scan_Chain/De0-Nano/Scan_Reg.vhd   ;         ;
+; Scan_Chain.vhd                   ; yes             ; User VHDL File  ; /home/titto/Desktop/Scan_Chain/De0-Nano/Scan_Chain.vhd ;         ;
+; Counter.vhd                      ; yes             ; User VHDL File  ; /home/titto/Desktop/Scan_Chain/De0-Nano/Counter.vhd    ;         ;
+; Adder.vhd                        ; yes             ; User VHDL File  ; /home/titto/Desktop/Scan_Chain/De0-Nano/Adder.vhd      ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -290,6 +291,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Counter:DUT"                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; dummy_clk ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:Out_Reg"                                                     ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -323,7 +333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Mar 24 15:49:51 2015
+    Info: Processing started: Fri Mar 27 01:44:20 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Adder -c Adder
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file Scan_Reg.vhd
@@ -339,12 +349,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file Adder.v
     Info (12022): Found design unit 1: Adder-behave
     Info (12023): Found entity 1: Adder
 Info (12127): Elaborating entity "Adder" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Adder.vhd(53): object "dummy_clk" assigned a value but never read
 Info (12128): Elaborating entity "Scan_Chain" for hierarchy "Scan_Chain:SC"
 Warning (10492): VHDL Process Statement warning at Scan_Chain.vhd(76): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Scan_Chain.vhd(78): signal "TMS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Scan_Chain.vhd(92): signal "TMS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Scan_Chain.vhd(106): signal "TMS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Scan_Chain.vhd(120): signal "TMS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:SC|Scan_Reg:In_Reg"
 Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:SC|Scan_Reg:Out_Reg"
 Info (12128): Elaborating entity "Counter" for hierarchy "Counter:DUT"
@@ -360,9 +367,9 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 34 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 685 megabytes
-    Info: Processing ended: Tue Mar 24 15:49:53 2015
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 669 megabytes
+    Info: Processing ended: Fri Mar 27 01:44:22 2015
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
