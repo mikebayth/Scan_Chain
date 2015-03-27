@@ -160,32 +160,32 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 		}
 		else if (report[0] == 'A')
 		{
 			strcpy(state,"IDL");
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 		}
 		else if (report[0] == 'S')
 		{
@@ -193,14 +193,14 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 			
 		}
 	}
@@ -225,9 +225,9 @@ void ui_led_change(uint8_t *report)
 		}
 		ioport_set_pin_level(TMS, LOW);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(20);
+		delay(10);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(20);
+		delay(10);
 		count++;
 		if (count >= length)
 		{
@@ -256,21 +256,21 @@ void ui_led_change(uint8_t *report)
 			}
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(20);
+			delay(10);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(20);
+			delay(10);
 		}
 		strcpy(ui_hid_report, data);
 		done = 1;	
 		strcpy(state,"IDL");
 		ioport_set_pin_level(TMS, HIGH);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(20);
+		delay(10);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(20);
+		delay(10);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(20);
+		delay(10);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(20);
+		delay(10);
 	}
 }
