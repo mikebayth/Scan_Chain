@@ -151,7 +151,7 @@ void ui_led_change(uint8_t *report)
 	int j = 0, out_pins = 0, line = 0;
 	
 	ioport_set_pin_level(TRST, LOW);
-	delay(5);
+	delay(10);
 	if (strcmp(state,"IDL") == 0)
 	{
 		if (report[0] == 'L')
@@ -240,18 +240,27 @@ void ui_led_change(uint8_t *report)
 		
 		out_pins = report[0];
 		line=0 ;
+		
+		if (out_pins == 8)	{
+			LED_On(LED5_GPIO);
+		}
+		else
+		{
+			LED_Off(LED5_GPIO);
+		}
+		
 		ioport_set_pin_level(TDI, LOW);
 		while ( line < out_pins )
 		{
-			ioport_set_pin_level(TRST, LOW);
+			
 			if (ioport_get_pin_level(TDO)==0)
 			{
-				LED_Off(LED2_GPIO);
+				LED_Off(LED7_GPIO);
 				data[line++] = '0';
 			}
 			else if (ioport_get_pin_level(TDO)==1)
 			{
-				LED_On(LED2_GPIO);
+				LED_On(LED7_GPIO);
 				data[line++] = '1';
 			}
 			ioport_set_pin_level(TMS, LOW);
