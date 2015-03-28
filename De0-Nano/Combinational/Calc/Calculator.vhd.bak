@@ -1,0 +1,16 @@
+----------------------------------------
+-- Adder
+-- Author : Titto Thomas
+-- Date : 12/3/2014
+----------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Calculator is
+  port (
+    in1, in2 : std_logic_vector(7 downto 0);		-- Two inputs
+	 op : : std_logic_vector(3 downto 0);			-- Operation
+	 ans: std_logic_vector(7 downto 0)				-- Answer
+    );
+end component;

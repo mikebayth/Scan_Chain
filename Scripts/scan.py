@@ -122,7 +122,7 @@ for comm in input_file.readlines():
 			time.sleep(out_pins*5)
 			inn = dev.read(0x81,out_pins,100)
 			recvd_data = ''.join(chr(e) for e in inn)
-			print "\n Received : ",recvd_data
+			print "\n Received : ",recvd_data[::-1]
 			
 			bit_num = 0
 			for mask_bit in mask.split():
