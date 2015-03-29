@@ -670,8 +670,8 @@ void ui_led_change(uint8_t *report)
 	int j = 0, out_pins = 0, line = 0;
 	
 	ioport_set_pin_level(TRST, LOW);
-	delay(10);
-     3d2:	8a e0       	ldi	r24, 0x0A	; 10
+	delay(15);
+     3d2:	8f e0       	ldi	r24, 0x0F	; 15
      3d4:	90 e0       	ldi	r25, 0x00	; 0
      3d6:	ca df       	rcall	.-108    	; 0x36c <delay>
 	if (strcmp(state,"IDL") == 0)
@@ -717,8 +717,8 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     418:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     418:	8f e0       	ldi	r24, 0x0F	; 15
      41a:	90 e0       	ldi	r25, 0x00	; 0
      41c:	a7 df       	rcall	.-178    	; 0x36c <delay>
 		bool level)
@@ -729,8 +729,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      41e:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     420:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     420:	8f e0       	ldi	r24, 0x0F	; 15
      422:	90 e0       	ldi	r25, 0x00	; 0
      424:	a3 df       	rcall	.-186    	; 0x36c <delay>
 	} else {
@@ -739,8 +739,8 @@ void ui_led_change(uint8_t *report)
      428:	1e 83       	std	Y+6, r17	; 0x06
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     42a:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     42a:	8f e0       	ldi	r24, 0x0F	; 15
      42c:	90 e0       	ldi	r25, 0x00	; 0
      42e:	9e df       	rcall	.-196    	; 0x36c <delay>
 		bool level)
@@ -751,8 +751,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      430:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     432:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     432:	8f e0       	ldi	r24, 0x0F	; 15
      434:	90 e0       	ldi	r25, 0x00	; 0
      436:	9a df       	rcall	.-204    	; 0x36c <delay>
 	} else {
@@ -761,8 +761,8 @@ void ui_led_change(uint8_t *report)
      43a:	1e 83       	std	Y+6, r17	; 0x06
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     43c:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     43c:	8f e0       	ldi	r24, 0x0F	; 15
      43e:	90 e0       	ldi	r25, 0x00	; 0
      440:	95 df       	rcall	.-214    	; 0x36c <delay>
 		bool level)
@@ -773,8 +773,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      442:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     444:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     444:	8f e0       	ldi	r24, 0x0F	; 15
      446:	90 e0       	ldi	r25, 0x00	; 0
      448:	91 df       	rcall	.-222    	; 0x36c <delay>
      44a:	54 c1       	rjmp	.+680    	; 0x6f4 <ui_led_change+0x34a>
@@ -802,8 +802,8 @@ void ui_led_change(uint8_t *report)
      472:	1e 83       	std	Y+6, r17	; 0x06
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     474:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     474:	8f e0       	ldi	r24, 0x0F	; 15
      476:	90 e0       	ldi	r25, 0x00	; 0
      478:	79 df       	rcall	.-270    	; 0x36c <delay>
 		bool level)
@@ -814,16 +814,16 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      47a:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     47c:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     47c:	8f e0       	ldi	r24, 0x0F	; 15
      47e:	90 e0       	ldi	r25, 0x00	; 0
      480:	75 df       	rcall	.-278    	; 0x36c <delay>
 	} else {
 		base->OUTCLR = arch_ioport_pin_to_mask(pin);
      482:	1e 83       	std	Y+6, r17	; 0x06
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     484:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     484:	8f e0       	ldi	r24, 0x0F	; 15
      486:	90 e0       	ldi	r25, 0x00	; 0
      488:	71 df       	rcall	.-286    	; 0x36c <delay>
 		bool level)
@@ -834,8 +834,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      48a:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     48c:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     48c:	8f e0       	ldi	r24, 0x0F	; 15
      48e:	90 e0       	ldi	r25, 0x00	; 0
      490:	6d df       	rcall	.-294    	; 0x36c <delay>
      492:	30 c1       	rjmp	.+608    	; 0x6f4 <ui_led_change+0x34a>
@@ -875,8 +875,8 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     4c2:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     4c2:	8f e0       	ldi	r24, 0x0F	; 15
      4c4:	90 e0       	ldi	r25, 0x00	; 0
      4c6:	52 df       	rcall	.-348    	; 0x36c <delay>
 		bool level)
@@ -887,8 +887,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      4c8:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     4ca:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     4ca:	8f e0       	ldi	r24, 0x0F	; 15
      4cc:	90 e0       	ldi	r25, 0x00	; 0
      4ce:	4e df       	rcall	.-356    	; 0x36c <delay>
 	} else {
@@ -897,8 +897,8 @@ void ui_led_change(uint8_t *report)
      4d2:	1e 83       	std	Y+6, r17	; 0x06
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     4d4:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     4d4:	8f e0       	ldi	r24, 0x0F	; 15
      4d6:	90 e0       	ldi	r25, 0x00	; 0
      4d8:	49 df       	rcall	.-366    	; 0x36c <delay>
 		bool level)
@@ -909,8 +909,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      4da:	1d 83       	std	Y+5, r17	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     4dc:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     4dc:	8f e0       	ldi	r24, 0x0F	; 15
      4de:	90 e0       	ldi	r25, 0x00	; 0
      4e0:	45 df       	rcall	.-374    	; 0x36c <delay>
      4e2:	08 c1       	rjmp	.+528    	; 0x6f4 <ui_led_change+0x34a>
@@ -1001,8 +1001,8 @@ void ui_led_change(uint8_t *report)
 		}
 		ioport_set_pin_level(TMS, LOW);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
-     574:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     574:	8f e0       	ldi	r24, 0x0F	; 15
      576:	90 e0       	ldi	r25, 0x00	; 0
      578:	f9 de       	rcall	.-526    	; 0x36c <delay>
 		bool level)
@@ -1013,8 +1013,8 @@ void ui_led_change(uint8_t *report)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      57a:	1d 83       	std	Y+5, r17	; 0x05
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
-     57c:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     57c:	8f e0       	ldi	r24, 0x0F	; 15
      57e:	90 e0       	ldi	r25, 0x00	; 0
      580:	f5 de       	rcall	.-534    	; 0x36c <delay>
 		count++;
@@ -1227,8 +1227,8 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
 			}
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
-     684:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     684:	8f e0       	ldi	r24, 0x0F	; 15
      686:	90 e0       	ldi	r25, 0x00	; 0
      688:	71 de       	rcall	.-798    	; 0x36c <delay>
 		bool level)
@@ -1240,8 +1240,8 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
      68a:	f8 01       	movw	r30, r16
      68c:	95 82       	std	Z+5, r9	; 0x05
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
-     68e:	8a e0       	ldi	r24, 0x0A	; 10
+			delay(15);
+     68e:	8f e0       	ldi	r24, 0x0F	; 15
      690:	90 e0       	ldi	r25, 0x00	; 0
      692:	6c de       	rcall	.-808    	; 0x36c <delay>
 		{
@@ -1254,9 +1254,9 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
      696:	dd 05       	cpc	r29, r13
      698:	dc f2       	brlt	.-74     	; 0x650 <ui_led_change+0x2a6>
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(15);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(15);
 		}
 		strcpy(ui_hid_report, data);
      69a:	6f ed       	ldi	r22, 0xDF	; 223
@@ -1288,8 +1288,8 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
      6d4:	1e 83       	std	Y+6, r17	; 0x06
 		ioport_set_pin_level(TMS, HIGH);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
-     6d6:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     6d6:	8f e0       	ldi	r24, 0x0F	; 15
      6d8:	90 e0       	ldi	r25, 0x00	; 0
      6da:	48 de       	rcall	.-880    	; 0x36c <delay>
 		bool level)
@@ -1300,16 +1300,16 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      6dc:	1d 83       	std	Y+5, r17	; 0x05
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
-     6de:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     6de:	8f e0       	ldi	r24, 0x0F	; 15
      6e0:	90 e0       	ldi	r25, 0x00	; 0
      6e2:	44 de       	rcall	.-888    	; 0x36c <delay>
 	} else {
 		base->OUTCLR = arch_ioport_pin_to_mask(pin);
      6e4:	1e 83       	std	Y+6, r17	; 0x06
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
-     6e6:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     6e6:	8f e0       	ldi	r24, 0x0F	; 15
      6e8:	90 e0       	ldi	r25, 0x00	; 0
      6ea:	40 de       	rcall	.-896    	; 0x36c <delay>
 		bool level)
@@ -1320,8 +1320,8 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
 		base->OUTSET = arch_ioport_pin_to_mask(pin);
      6ec:	1d 83       	std	Y+5, r17	; 0x05
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
-     6ee:	8a e0       	ldi	r24, 0x0A	; 10
+		delay(15);
+     6ee:	8f e0       	ldi	r24, 0x0F	; 15
      6f0:	90 e0       	ldi	r25, 0x00	; 0
      6f2:	3c de       	rcall	.-904    	; 0x36c <delay>
 	}
