@@ -25,9 +25,10 @@ if len(sys.argv) != 3 :
 	print "Error : The correct format is ./scan.py <input file> <output file>"
 	sys.exit(1)
 else:
-	input_file = open(sys.argv[1],"r");
-	output_file = open(sys.argv[2],"w");
-
+	input_file = open(sys.argv[1],"r")
+	output_file = open(sys.argv[2],"w")
+	output_file.write("Expected Output    Received Output   Remarks\n")
+	output_file.write("============================================\n")
 
 #----------------- Connecting to device -------------------------------
 print "Initiating connection with the device.."
@@ -91,11 +92,11 @@ for comm in input_file.readlines():
 		
 		for single in list(command_out):
 			dev.write(2,single,100)
-			time.sleep(5)
+			time.sleep(3)
 		print "Successfully entered the input.."
 		
 	elif command[0] == "RUNTEST":
-		time_sec = int(command[1])
+		time_sec = int(command[1]) #*3
 		dev.write(2,'A',100)		
 		time.sleep(5)
 		print"Applying input.."
@@ -119,19 +120,46 @@ for comm in input_file.readlines():
 			time.sleep(5)
 			dev.write(2,chr(out_pins),100)
 			print "Sampling out data.."
-			time.sleep(out_pins*5)
-			inn = dev.read(0x81,out_pins,100)
+			time.sleep(out_pins*3)
+			inn = dev.read(0x81,512,100)
+			inn = inn [0:out_pins]
+			valid = 1
+			for each in inn:
+				if each not in {0x30,0x31}:
+					valid = 0
+					
+			while (valid != 1):
+				# print "Error occured, requesting again.."
+				dev.write(2,'R',100)
+				time.sleep(5)
+				inn = dev.read(0x81,512,100)
+				inn = inn [0:out_pins]
+				valid = 1
+				for each in inn:
+					if each not in {0x30,0x31}:
+						valid = 0
+			
 			recvd_data = ''.join(chr(e) for e in inn)
-			print "\n Received : ",recvd_data[::-1]
+			print "\nOutput : ",recvd_data[::-1]
 			
 			bit_num = 0
-			for mask_bit in mask.split():
+			invalid = 0
+			for mask_bit in mask:
+				if ( mask_bit == '1' ):
+					if (inn[out_pins-1-bit_num] != (48+int(expct_out[bit_num]))):
+						invalid = 1
 				bit_num += 1
-				if ( mask_bit == 1 ):
-					if (inn(bit_num) != excpt_out(bit_num )):
-						print " Compare failed !"
-			
+			if ( invalid == 0 ):
+				result = "Success"
+			else :
+				result = "Failure"
+				
+			print "Output Comparison : ", result
+			file_data = expct_out + "    " + recvd_data[::-1] + "   " + result+"\n"
+			output_file.write(file_data)
 	else :
 		print "Error : Unknown command on line ", line_num, ", skipping.."
-
+	
+input_file.close()
+output_file.close()
 	
