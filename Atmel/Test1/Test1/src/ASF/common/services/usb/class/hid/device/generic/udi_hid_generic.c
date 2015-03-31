@@ -48,7 +48,7 @@
 #include "udi_hid.h"
 #include "udi_hid_generic.h"
 #include <string.h>
-
+#include <asf.h>
 /**
  * \ingroup udi_hid_generic_group
  * \defgroup udi_hid_generic_group_udc Interface with USB Device Core (UDC)
@@ -243,14 +243,17 @@ static bool udi_hid_generic_setreport(void)
 
 bool udi_hid_generic_send_report_in(uint8_t *data)
 {
+
 	if (!udi_hid_generic_b_report_in_free)
 		return false;
 	irqflags_t flags = cpu_irq_save();
+	
 	// Fill report
-	memset(&udi_hid_generic_report_in, 0,
+	memset(&udi_hid_generic_report_in, '0',
 			sizeof(udi_hid_generic_report_in));
 	memcpy(&udi_hid_generic_report_in, data,
 	      		sizeof(udi_hid_generic_report_in));
+				  
 	udi_hid_generic_b_report_in_free =
 			!udd_ep_run(UDI_HID_GENERIC_EP_IN,
 							false,

@@ -43,6 +43,7 @@
  */
 
 #include "conf_usb.h"
+#include <asf.h>
 
 // Read Modify Write opcode is implemented after IAR AVR 5.51
 #ifdef __ICCAVR__
@@ -685,7 +686,7 @@ bool udd_ep_run(udd_ep_id_t ep, bool b_shortpacket, uint8_t * buf,
 	if (udd_endpoint_get_type(ep_ctrl)!=USB_EP_TYPE_ISOCHRONOUS_gc
 		&& udd_endpoint_is_stall(ep_ctrl)) {
 		return false; // Endpoint is halted
-	}
+	} 
 	flags = cpu_irq_save();
 	if (ptr_job->busy == true) {
 		cpu_irq_restore(flags);
@@ -693,7 +694,6 @@ bool udd_ep_run(udd_ep_id_t ep, bool b_shortpacket, uint8_t * buf,
 	}
 	ptr_job->busy = true;
 	cpu_irq_restore(flags);
-
 
 	// Update Job information
 	ptr_job->buf = buf;
@@ -710,12 +710,12 @@ bool udd_ep_run(udd_ep_id_t ep, bool b_shortpacket, uint8_t * buf,
 	}
 	else
 	{
-		if ((USB_EP_TYPE_ISOCHRONOUS_gc == udd_endpoint_get_type(ep_ctrl))
+		/* if ((USB_EP_TYPE_ISOCHRONOUS_gc == udd_endpoint_get_type(ep_ctrl))
 		&& (0 != (buf_size % udd_ep_get_size(ep_ctrl)))) {
 			// The user must use a buffer size modulo endpoint size
 			ptr_job->busy = false;
 			return false;
-		}
+		}*/
 		udd_endpoint_out_reset_nb_received(ep_ctrl);
 		udd_endpoint_out_set_nbbyte(ep_ctrl, 0);
 	}

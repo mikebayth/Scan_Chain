@@ -5,14 +5,14 @@ TDO <= Scan_Chain:SC.TDO
 TMS => Scan_Chain:SC.TMS
 TCLK => Scan_Chain:SC.TCLK
 TRST => Scan_Chain:SC.TRST
-LED[0] <= Scan_Chain:SC.state[0]
-LED[1] <= Scan_Chain:SC.state[1]
-LED[2] <= Scan_Chain:SC.state[2]
-LED[3] <= Scan_Chain:SC.state[3]
-LED[4] <= Scan_Chain:SC.state[4]
-LED[5] <= Scan_Chain:SC.state[5]
-LED[6] <= Scan_Chain:SC.state[6]
-LED[7] <= Scan_Chain:SC.state[7]
+LED[0] <= Calculator:DUT.ans[0]
+LED[1] <= Calculator:DUT.ans[1]
+LED[2] <= Calculator:DUT.ans[2]
+LED[3] <= Calculator:DUT.ans[3]
+LED[4] <= Calculator:DUT.ans[4]
+LED[5] <= Calculator:DUT.ans[5]
+LED[6] <= Calculator:DUT.ans[6]
+LED[7] <= Calculator:DUT.ans[7]
 
 
 |Calc|Scan_Chain:SC

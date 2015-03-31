@@ -1,6 +1,6 @@
 Flow report for Calc
-Sat Mar 28 17:04:27 2015
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Mon Mar 30 02:33:56 2015
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
 ---------------------
@@ -21,34 +21,35 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 28 17:04:27 2015      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Flow Status                        ; Successful - Mon Mar 30 02:33:56 2015      ;
+; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; Calc                                       ;
 ; Top-level Entity Name              ; Calc                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE22F17C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 238 / 22,320 ( 1 % )                       ;
-;     Total combinational functions  ; 238 / 22,320 ( 1 % )                       ;
+; Total logic elements               ; 237 / 22,320 ( 1 % )                       ;
+;     Total combinational functions  ; 237 / 22,320 ( 1 % )                       ;
 ;     Dedicated logic registers      ; 53 / 22,320 ( < 1 % )                      ;
 ; Total registers                    ; 53                                         ;
 ; Total pins                         ; 14 / 154 ( 9 % )                           ;
@@ -64,7 +65,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/28/2015 17:03:55 ;
+; Start date & time ; 03/30/2015 02:33:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Calc                ;
 +-------------------+---------------------+
@@ -75,7 +76,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167740440036.142756223518173          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167740440036.142766298405348          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -95,12 +96,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 686 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 849 MB              ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 614 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 641 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 842 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 664 MB              ; 00:00:30                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 871 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 556 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 614 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 525 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:44                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,11 +110,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; titto-pc         ; Deepin \n ; Deepin \n  ; x86_64         ;
-; Fitter                    ; titto-pc         ; Deepin \n ; Deepin \n  ; x86_64         ;
-; Assembler                 ; titto-pc         ; Deepin \n ; Deepin \n  ; x86_64         ;
-; TimeQuest Timing Analyzer ; titto-pc         ; Deepin \n ; Deepin \n  ; x86_64         ;
-; EDA Netlist Writer        ; titto-pc         ; Deepin \n ; Deepin \n  ; x86_64         ;
+; Analysis & Synthesis      ; titto-wel        ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; titto-wel        ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; titto-wel        ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; titto-wel        ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; titto-wel        ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

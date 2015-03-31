@@ -1,0 +1,29 @@
+Quartus II Archive log --	C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc_tmp_archive.qarlog
+
+Archive:	C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc_tmp_archive.qar
+Date:		Tue Mar 31 03:52:27 2015
+Quartus II 64-Bit		14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Adder.vhd
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc.out.sdc
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc.qpf
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc.qsf
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc.vhd
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc_assignment_defaults.qdf
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calculator.vhd
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Scan_Chain.vhd
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Scan_Reg.vhd
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/output_files/Chain1.cdf
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/output_files/Chain2.cdf
+C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/output_files/Chain3.cdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Mar 31 03:52:30 2015
+Source archive file:	C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Combinational/Calc/Calc_tmp_archive.qar
+Archive was extracted into	C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/
+		 - successfully.

@@ -43,7 +43,34 @@ src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.d \
  ../src/ASF/common/services/usb/udc/udc.h \
  ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/common/services/usb/class/hid/device/udi_hid.h \
- c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\string.h
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\string.h \
+ ../src/asf.h ../src/ASF/xmega/drivers/cpu/ccp.h \
+ ../src/ASF/xmega/drivers/cpu/xmega_reset_cause.h \
+ ../src/ASF/xmega/drivers/cpu/ccp.h \
+ ../src/ASF/common/services/gpio/gpio.h \
+ ../src/ASF/common/services/gpio/xmega_gpio/xmega_gpio.h \
+ ../src/ASF/common/services/ioport/ioport.h \
+ ../src/ASF/common/services/ioport/xmega/ioport.h \
+ ../src/ASF/common/services/ioport/xmega/ioport_compat.h \
+ ../src/ASF/common/services/ioport/xmega/../ioport.h \
+ ../src/ASF/common/boards/board.h \
+ ../src/ASF/xmega/boards/stk600/rc044x/stk600_rc044x.h \
+ ../src/ASF/xmega/drivers/nvm/nvm.h \
+ ../src/ASF/xmega/boards/stk600/rc044x/led.h \
+ ../src/ASF/xmega/drivers/sleep/sleep.h \
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\avr\sleep.h \
+ ../src/ASF/common/services/sleepmgr/sleepmgr.h \
+ ../src/ASF/common/services/sleepmgr/xmega/sleepmgr.h \
+ ../src/config/conf_sleepmgr.h \
+ ../src/ASF/common/services/sleepmgr/xmega/sleepmgr.h \
+ ../src/ASF/common/services/clock/sysclk.h ../src/config/conf_clock.h \
+ ../src/ASF/common/services/clock/xmega/sysclk.h \
+ ../src/ASF/common/services/clock/osc.h \
+ ../src/ASF/common/services/clock/xmega/osc.h \
+ ../src/ASF/common/services/clock/pll.h \
+ ../src/ASF/common/services/clock/xmega/pll.h \
+ ../src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.h \
+ ../src/ASF/xmega/utils/status_codes.h
 
 ../src/config/conf_usb.h:
 
@@ -136,3 +163,61 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-g
 ../src/ASF/common/services/usb/class/hid/device/udi_hid.h:
 
 c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\string.h:
+
+../src/asf.h:
+
+../src/ASF/xmega/drivers/cpu/ccp.h:
+
+../src/ASF/xmega/drivers/cpu/xmega_reset_cause.h:
+
+../src/ASF/xmega/drivers/cpu/ccp.h:
+
+../src/ASF/common/services/gpio/gpio.h:
+
+../src/ASF/common/services/gpio/xmega_gpio/xmega_gpio.h:
+
+../src/ASF/common/services/ioport/ioport.h:
+
+../src/ASF/common/services/ioport/xmega/ioport.h:
+
+../src/ASF/common/services/ioport/xmega/ioport_compat.h:
+
+../src/ASF/common/services/ioport/xmega/../ioport.h:
+
+../src/ASF/common/boards/board.h:
+
+../src/ASF/xmega/boards/stk600/rc044x/stk600_rc044x.h:
+
+../src/ASF/xmega/drivers/nvm/nvm.h:
+
+../src/ASF/xmega/boards/stk600/rc044x/led.h:
+
+../src/ASF/xmega/drivers/sleep/sleep.h:
+
+c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\avr\sleep.h:
+
+../src/ASF/common/services/sleepmgr/sleepmgr.h:
+
+../src/ASF/common/services/sleepmgr/xmega/sleepmgr.h:
+
+../src/config/conf_sleepmgr.h:
+
+../src/ASF/common/services/sleepmgr/xmega/sleepmgr.h:
+
+../src/ASF/common/services/clock/sysclk.h:
+
+../src/config/conf_clock.h:
+
+../src/ASF/common/services/clock/xmega/sysclk.h:
+
+../src/ASF/common/services/clock/osc.h:
+
+../src/ASF/common/services/clock/xmega/osc.h:
+
+../src/ASF/common/services/clock/pll.h:
+
+../src/ASF/common/services/clock/xmega/pll.h:
+
+../src/ASF/common/services/usb/class/hid/device/generic/udi_hid_generic.h:
+
+../src/ASF/xmega/utils/status_codes.h:

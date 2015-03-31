@@ -61,6 +61,6 @@ begin  -- behave
   in1 <= dut_in(15 downto 8);
   in2 <= dut_in(7 downto 0);
   
-  LED <= state;
+  LED <= dut_out;
 end behave;
 
