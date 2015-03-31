@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "03/31/2015 18:25:48"
+-- DATE "03/31/2015 22:53:05"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -38,11 +38,11 @@ ENTITY 	Counter IS
     PORT (
 	clock_50 : IN std_logic;
 	TDI : IN std_logic;
-	TDO : OUT std_logic;
+	TDO : BUFFER std_logic;
 	TMS : IN std_logic;
 	TCLK : IN std_logic;
 	TRST : IN std_logic;
-	LED : OUT std_logic_vector(7 DOWNTO 0)
+	LED : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END Counter;
 
@@ -150,8 +150,8 @@ SIGNAL \DUT|cnt\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \SC|In_Reg|L2\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \SC|In_Reg|PO\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \SC|In_Reg|L1\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \SC|In_Reg|ALT_INV_PO[1]~0_combout\ : std_logic;
 SIGNAL \ALT_INV_TRST~input_o\ : std_logic;
+SIGNAL \SC|In_Reg|ALT_INV_PO[1]~0_combout\ : std_logic;
 
 BEGIN
 
@@ -169,8 +169,8 @@ ww_devpor <= devpor;
 \SC|In_Reg|PO[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \SC|In_Reg|PO\(0));
 
 \TCLK~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \TCLK~input_o\);
-\SC|In_Reg|ALT_INV_PO[1]~0_combout\ <= NOT \SC|In_Reg|PO[1]~0_combout\;
 \ALT_INV_TRST~input_o\ <= NOT \TRST~input_o\;
+\SC|In_Reg|ALT_INV_PO[1]~0_combout\ <= NOT \SC|In_Reg|PO[1]~0_combout\;
 
 -- Location: IOOBUF_X31_Y34_N2
 \TDO~output\ : cycloneive_io_obuf

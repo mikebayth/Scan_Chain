@@ -1,18 +1,18 @@
 |Counter
 clock_50 => ~NO_FANOUT~
 TDI => Scan_Chain:SC.TDI
-TDO <= Scan_Chain:SC.TDO
+TDO << Scan_Chain:SC.TDO
 TMS => Scan_Chain:SC.TMS
 TCLK => Scan_Chain:SC.TCLK
 TRST => Scan_Chain:SC.TRST
-LED[0] <= Count:DUT.count[0]
-LED[1] <= Count:DUT.count[1]
-LED[2] <= Count:DUT.count[2]
-LED[3] <= Count:DUT.count[3]
-LED[4] <= Count:DUT.count[4]
-LED[5] <= Count:DUT.count[5]
-LED[6] <= Count:DUT.count[6]
-LED[7] <= Count:DUT.count[7]
+LED[0] << Count:DUT.count[0]
+LED[1] << Count:DUT.count[1]
+LED[2] << Count:DUT.count[2]
+LED[3] << Count:DUT.count[3]
+LED[4] << Count:DUT.count[4]
+LED[5] << Count:DUT.count[5]
+LED[6] << Count:DUT.count[6]
+LED[7] << Count:DUT.count[7]
 
 
 |Counter|Scan_Chain:SC
