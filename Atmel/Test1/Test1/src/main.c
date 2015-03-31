@@ -9,6 +9,7 @@ static volatile bool main_b_generic_enable = false;
  */
 int main(void)
 {
+
 	sysclk_init();
 	irq_initialize_vectors();
 	cpu_irq_enable();
@@ -19,7 +20,7 @@ int main(void)
 	board_init();
 	ui_init();
 	ui_powerdown();
-
+	
 	PORTD_DIR = 0xff;
 	PORTC_DIR = 0x00;
 	PORTD_OUT = 0x00;

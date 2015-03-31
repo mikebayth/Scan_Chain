@@ -46,7 +46,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-uint8_t hid_report[UDI_HID_REPORT_IN_SIZE];
+uint8_t hid_report[UDI_HID_REPORT_IN_SIZE], prv_report[UDI_HID_REPORT_IN_SIZE];
 
 uint16_t count = 0, length = 0;
 char state[3] = "IDL";
@@ -128,10 +128,10 @@ void ui_wakeup(void)
 
 void ui_process(uint16_t framenumber )
 {
-
 	if (done > 0 )
 	{
 		udi_hid_generic_send_report_in(hid_report);
+		strcpy((char *)prv_report, (char *)hid_report);
 		done = 0;
 	}
 	
@@ -163,32 +163,32 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 		}
 		else if (report[0] == 'A')
 		{
 			strcpy(state,"IDL");
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 		}
 		else if (report[0] == 'S')
 		{
@@ -196,15 +196,20 @@ void ui_led_change(uint8_t *report)
 			ioport_set_pin_level(TRST, LOW);
 			ioport_set_pin_level(TMS, HIGH);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 			
+		}
+		else if (report[0] == 'R')
+		{
+			udi_hid_generic_send_report_in(prv_report);
+			delay(10);
 		}
 	}
 	else if (strcmp(state,"LOD") == 0)
@@ -228,9 +233,9 @@ void ui_led_change(uint8_t *report)
 		}
 		ioport_set_pin_level(TMS, LOW);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
+		delay(5);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
+		delay(5);
 		count++;
 		if (count >= length)
 		{
@@ -257,25 +262,24 @@ void ui_led_change(uint8_t *report)
 				LED_On(LED7_GPIO);
 			}
 			line += 1;
-			delay(30);
 			ioport_set_pin_level(TMS, LOW);
 			ioport_set_pin_level(TCLK, LOW);
-			delay(10);
+			delay(5);
 			ioport_set_pin_level(TCLK, HIGH);
-			delay(10);
+			delay(5);
 		}
 		hid_report[out_pins] = '\0';
 		done = 1;
 		strcpy(state,"IDL");
 		ioport_set_pin_level(TMS, HIGH);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
+		delay(5);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
+		delay(5);
 		ioport_set_pin_level(TCLK, LOW);
-		delay(10);
+		delay(5);
 		ioport_set_pin_level(TCLK, HIGH);
-		delay(10);
+		delay(5);
 		
 	}
 }
