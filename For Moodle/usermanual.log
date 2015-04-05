@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  1 APR 2015 11:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  5 APR 2015 16:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -423,21 +423,24 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsavesec=\count104
 \c@@ppsaveapp=\count105
 )
-(./usermanual.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./usermanual.aux)
 \openout1 = `usermanual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -515,12 +518,45 @@ runsystem(pygmentize -S default -f latex > usermanual.pyg)...executed.
 
 (./usermanual.pyg)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
- (./scan_main.tex
+(Font)              <6> on input line 15.
+ (./scanChain.tex
+Package epstopdf Info: Source file: <scanChain.eps>
+(epstopdf)                    date: 2015-04-05 15:26:32
+(epstopdf)                    size: 9583 bytes
+(epstopdf)             Output file: <scanChain-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-05 15:47:37
+(epstopdf)                    size: 2712 bytes
+(epstopdf)             Command: <epstopdf --outfile=scanChain-eps-converted-to.
+pdf scanChain.eps>
+(epstopdf)             \includegraphics on input line 18.
+Package epstopdf Info: Output file is already uptodate.
+
+<scanChain-eps-converted-to.pdf, id=1, 453.695pt x 236.885pt>
+File: scanChain-eps-converted-to.pdf Graphic file (type pdf)
+
+<use scanChain-eps-converted-to.pdf>
+Package pdftex.def Info: scanChain-eps-converted-to.pdf used on input line 18.
+(pdftex.def)             Requested size: 453.6939pt x 236.88441pt.
+
+Overfull \hbox (8.02853pt too wide) in paragraph at lines 18--18
+[][] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 18.
+)
+Overfull \hbox (14.45235pt too wide) in paragraph at lines 18--23
+ [][] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./scanChain-eps-converted-
+to.pdf>] (./scan_main.tex
 Package epstopdf Info: Source file: <scan_main.eps>
 (epstopdf)                    date: 2015-03-29 22:13:32
 (epstopdf)                    size: 10369 bytes
@@ -532,29 +568,23 @@ pdf scan_main.eps>
 (epstopdf)             \includegraphics on input line 26.
 Package epstopdf Info: Output file is already uptodate.
 
-<scan_main-eps-converted-to.pdf, id=1, 495.8525pt x 143.53625pt>
+<scan_main-eps-converted-to.pdf, id=12, 495.8525pt x 143.53625pt>
 File: scan_main-eps-converted-to.pdf Graphic file (type pdf)
 
 <use scan_main-eps-converted-to.pdf>
 Package pdftex.def Info: scan_main-eps-converted-to.pdf used on input line 26.
 (pdftex.def)             Requested size: 446.26312pt x 129.18141pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 26.
 )
-Overfull \hbox (56.60948pt too wide) in paragraph at lines 26--29
+Overfull \hbox (56.60948pt too wide) in paragraph at lines 26--35
  [][] 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./scan_main-eps-converted-
-to.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
  (./DUT.tex
 Package epstopdf Info: Source file: <DUT.eps>
 (epstopdf)                    date: 2015-03-29 22:13:32
@@ -567,18 +597,21 @@ T.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
 
-<DUT-eps-converted-to.pdf, id=12, 489.83pt x 318.18875pt>
+<DUT-eps-converted-to.pdf, id=13, 489.83pt x 318.18875pt>
 File: DUT-eps-converted-to.pdf Graphic file (type pdf)
 
 <use DUT-eps-converted-to.pdf>
 Package pdftex.def Info: DUT-eps-converted-to.pdf used on input line 23.
 (pdftex.def)             Requested size: 367.3716pt x 238.64096pt.
 )
-Overfull \hbox (50.58734pt too wide) in paragraph at lines 23--56
+Overfull \hbox (50.58734pt too wide) in paragraph at lines 23--62
  [][] 
  []
 
-[2 <./DUT-eps-converted-to.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./scan_main-eps-converted-to.pdf>]
 \openout3 = `usermanual.pyg'.
 
 runsystem(pygmentize -l vhdl -f latex -F tokenmerge             -P "verboptions
@@ -592,7 +625,7 @@ runsystem(rm usermanual.out.pyg)...executed.
 
 runsystem(rm usermanual.pyg)...executed.
 
- (./Counter.tex
+ [3 <./DUT-eps-converted-to.pdf>] (./Counter.tex
 Package epstopdf Info: Source file: <Counter.eps>
 (epstopdf)                    date: 2015-04-01 10:54:24
 (epstopdf)                    size: 9707 bytes
@@ -604,14 +637,14 @@ f Counter.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<Counter-eps-converted-to.pdf, id=20, 381.425pt x 285.065pt>
+<Counter-eps-converted-to.pdf, id=27, 381.425pt x 285.065pt>
 File: Counter-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Counter-eps-converted-to.pdf>
 Package pdftex.def Info: Counter-eps-converted-to.pdf used on input line 22.
 (pdftex.def)             Requested size: 305.1404pt x 228.0523pt.
-) [3 <./Counter-eps-converted-to.pdf>]
-Overfull \hbox (11.74092pt too wide) in paragraph at lines 118--124
+) [4 <./Counter-eps-converted-to.pdf>]
+Overfull \hbox (11.74092pt too wide) in paragraph at lines 123--129
 []\OT1/cmtt/m/n/10.95 SDR $\OML/cmm/m/it/10.95 < in pins >$ \OT1/cmtt/m/n/10.95
  TDI($\OML/cmm/m/it/10.95 < input >$\OT1/cmtt/m/n/10.95 ) $\OML/cmm/m/it/10.95 
 < out pins >$ \OT1/cmtt/m/n/10.95 TDO($\OML/cmm/m/it/10.95 < output >$\OT1/cmtt
@@ -619,21 +652,21 @@ Overfull \hbox (11.74092pt too wide) in paragraph at lines 118--124
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
 
  []
 
-[4] [5]
+[5] (./usermanual.bbl)
 \openout3 = `usermanual.pyg'.
 
 runsystem(pygmentize -l vhdl -f latex -F tokenmerge             -P "verboptions
@@ -645,19 +678,19 @@ runsystem(rm usermanual.out.pyg)...executed.
 runsystem(rm usermanual.pyg)...executed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--234
+Underfull \hbox (badness 10000) in paragraph at lines 224--244
 
  []
 
 [7] (./usermanual.aux) ) 
 Here is how much of TeX's memory you used:
- 3702 strings out of 493304
- 51241 string characters out of 6139871
- 126878 words of memory out of 5000000
- 7077 multiletter control sequences out of 15000+600000
+ 3788 strings out of 493304
+ 52355 string characters out of 6139871
+ 129974 words of memory out of 5000000
+ 7153 multiletter control sequences out of 15000+600000
  9493 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,12n,40p,626b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,40p,602b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -666,10 +699,10 @@ nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on usermanual.pdf (7 pages, 124935 bytes).
+Output written on usermanual.pdf (7 pages, 129279 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

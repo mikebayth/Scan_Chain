@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{JTAG}
+Ieee standard for reduced-pin and enhanced-functionality test access port and
+  boundary-scan architecture.
+\newblock {\em IEEE Std 1149.7-2009}, pages c1--985, Feb 2010.
+
+\bibitem{pyUSB}
+Wander~Lairson Costa.
+\newblock Pyusb - usb access on python, 2015.
+\newblock [Online; accessed 5-March-2015].
+
+\bibitem{svf}
+Neil Jacobson.
+\newblock {\em The in-system configuration handbook : a designer's guide to
+  ISC}.
+\newblock Kluwer Academic Publishers, Boston, 2004.
+
+\end{thebibliography}
