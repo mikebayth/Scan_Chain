@@ -15,7 +15,8 @@ entity Counter is
     TMS		: in std_logic;			-- TAP controller signal
     TCLK	: in std_logic;				-- Test clock
     TRST	: in std_logic;				-- Test reset
-	 LED	: out std_logic_vector(7 downto 0)	-- Check LED's
+	 LED	: out std_logic_vector(7 downto 0);	-- Check LED's
+	 dummy : in std_logic_vector(3 downto 0)	-- Check LED's
   );
 end Counter;
 

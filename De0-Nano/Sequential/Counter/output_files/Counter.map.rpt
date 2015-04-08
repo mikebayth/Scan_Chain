@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Counter
-Tue Mar 31 22:52:43 2015
+Tue Apr 07 19:54:55 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -18,10 +18,10 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: Scan_Chain:SC
- 13. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_reg:In_Reg
- 14. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_reg:Out_Reg
- 15. Port Connectivity Checks: "Scan_Chain:SC|Scan_reg:Out_Reg"
- 16. Port Connectivity Checks: "Scan_Chain:SC|Scan_reg:In_Reg"
+ 13. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:In_Reg
+ 14. Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:Out_Reg
+ 15. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:Out_Reg"
+ 16. Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:In_Reg"
  17. Port Connectivity Checks: "Scan_Chain:SC"
  18. Post-Synthesis Netlist Statistics for Top Partition
  19. Elapsed Time Per Partition
@@ -52,7 +52,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 31 22:52:43 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 07 19:54:55 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; Counter                                    ;
 ; Top-level Entity Name              ; Counter                                    ;
@@ -61,7 +61,7 @@ agreement for further details.
 ;     Total combinational functions  ; 35                                         ;
 ;     Dedicated logic registers      ; 25                                         ;
 ; Total registers                    ; 25                                         ;
-; Total pins                         ; 14                                         ;
+; Total pins                         ; 18                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -167,16 +167,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------+---------+
-; Counter.vhd                      ; yes             ; User VHDL File        ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Counter.vhd    ;         ;
-; Count.vhd                        ; yes             ; User VHDL File        ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Count.vhd      ;         ;
-; scan_chain.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/scan_chain.vhd ;         ;
-; scan_reg.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/scan_reg.vhd   ;         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; Scan_Chain.vhd                   ; yes             ; User VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Scan_Chain.vhd ;         ;
+; Scan_Reg.vhd                     ; yes             ; User VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Scan_Reg.vhd   ;         ;
+; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Counter.vhd    ;         ;
+; Count.vhd                        ; yes             ; User VHDL File  ; C:/Users/Titto Thomas/Desktop/Scan_Chain/De0-Nano/Sequential/Counter/Count.vhd      ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -200,14 +200,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 25         ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 14         ;
+; I/O pins                                    ; 18         ;
 ;                                             ;            ;
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; TRST~input ;
 ; Maximum fan-out                             ; 34         ;
-; Total fan-out                               ; 205        ;
-; Average fan-out                             ; 2.33       ;
+; Total fan-out                               ; 209        ;
+; Average fan-out                             ; 2.18       ;
 +---------------------------------------------+------------+
 
 
@@ -216,7 +216,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+--------------+
-; |Counter                   ; 35 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Counter                                ; work         ;
+; |Counter                   ; 35 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |Counter                                ; work         ;
 ;    |Count:DUT|             ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Counter|Count:DUT                      ; work         ;
 ;    |Scan_Chain:SC|         ; 27 (10)           ; 17 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Counter|Scan_Chain:SC                  ; work         ;
 ;       |Scan_Reg:In_Reg|    ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Counter|Scan_Chain:SC|Scan_Reg:In_Reg  ; work         ;
@@ -292,7 +292,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_reg:In_Reg ;
+; Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:In_Reg ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -302,7 +302,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_reg:Out_Reg ;
+; Parameter Settings for User Entity Instance: Scan_Chain:SC|Scan_Reg:Out_Reg ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
@@ -312,7 +312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Scan_Chain:SC|Scan_reg:Out_Reg"                                                     ;
+; Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:Out_Reg"                                                     ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -321,7 +321,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "Scan_Chain:SC|Scan_reg:In_Reg" ;
+; Port Connectivity Checks: "Scan_Chain:SC|Scan_Reg:In_Reg" ;
 +------+-------+----------+---------------------------------+
 ; Port ; Type  ; Severity ; Details                         ;
 +------+-------+----------+---------------------------------+
@@ -343,7 +343,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 14                          ;
+; boundary_port         ; 18                          ;
 ; cycloneiii_ff         ; 25                          ;
 ;     CLR               ; 13                          ;
 ;     ENA               ; 4                           ;
@@ -367,7 +367,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -377,9 +377,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Mar 31 22:52:30 2015
+    Info: Processing started: Tue Apr 07 19:54:36 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Counter -c Counter
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file scan_chain.vhd
+    Info (12022): Found design unit 1: Scan_Chain-behave
+    Info (12023): Found entity 1: Scan_Chain
+Info (12021): Found 2 design units, including 1 entities, in source file scan_reg.vhd
+    Info (12022): Found design unit 1: Scan_Reg-behave
+    Info (12023): Found entity 1: Scan_Reg
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
     Info (12022): Found design unit 1: Counter-behave
     Info (12023): Found entity 1: Counter
@@ -387,45 +393,43 @@ Info (12021): Found 2 design units, including 1 entities, in source file count.v
     Info (12022): Found design unit 1: Count-behave
     Info (12023): Found entity 1: Count
 Info (12127): Elaborating entity "Counter" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Counter.vhd(49): object "state" assigned a value but never read
-Warning (12125): Using design file scan_chain.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Scan_Chain-behave
-    Info (12023): Found entity 1: Scan_Chain
+Warning (10036): Verilog HDL or VHDL warning at Counter.vhd(50): object "state" assigned a value but never read
 Info (12128): Elaborating entity "Scan_Chain" for hierarchy "Scan_Chain:SC"
-Warning (10631): VHDL Process Statement warning at scan_chain.vhd(66): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at scan_chain.vhd(66): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "next_state.s_update" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "next_state.s_shift" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "next_state.s_capture" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "next_state.s_DR" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "next_state.s_idle" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[0]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[1]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[2]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[3]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[4]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[5]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[6]" at scan_chain.vhd(66)
-Info (10041): Inferred latch for "state[7]" at scan_chain.vhd(66)
-Warning (12125): Using design file scan_reg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Scan_Reg-behave
-    Info (12023): Found entity 1: Scan_Reg
-Info (12128): Elaborating entity "Scan_reg" for hierarchy "Scan_Chain:SC|Scan_reg:In_Reg"
-Info (12128): Elaborating entity "Scan_reg" for hierarchy "Scan_Chain:SC|Scan_reg:Out_Reg"
+Warning (10631): VHDL Process Statement warning at Scan_Chain.vhd(66): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Scan_Chain.vhd(66): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_state.s_update" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "next_state.s_shift" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "next_state.s_capture" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "next_state.s_DR" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "next_state.s_idle" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[0]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[1]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[2]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[3]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[4]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[5]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[6]" at Scan_Chain.vhd(66)
+Info (10041): Inferred latch for "state[7]" at Scan_Chain.vhd(66)
+Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:SC|Scan_Reg:In_Reg"
+Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:SC|Scan_Reg:Out_Reg"
 Info (12128): Elaborating entity "Count" for hierarchy "Count:DUT"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock_50"
-Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+    Warning (15610): No output dependent on input pin "dummy[0]"
+    Warning (15610): No output dependent on input pin "dummy[1]"
+    Warning (15610): No output dependent on input pin "dummy[2]"
+    Warning (15610): No output dependent on input pin "dummy[3]"
+Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 39 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 656 megabytes
-    Info: Processing ended: Tue Mar 31 22:52:43 2015
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 653 megabytes
+    Info: Processing ended: Tue Apr 07 19:54:55 2015
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:30
 
 
