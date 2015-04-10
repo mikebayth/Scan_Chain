@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Scan Chain}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{JTAG}{3}{0}{1}
+\beamer@sectionintoc {2}{Test Setup}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Test Setup}{4}{0}{2}
+\beamer@sectionintoc {3}{Adding scan chain to your exisitng VHDL design}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Adding scan chain}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Scan Chain specifications}{9}{0}{3}
+\beamer@subsectionintoc {3}{3}{Reference Implementation}{11}{0}{3}
+\beamer@sectionintoc {4}{Hardware Interfacing}{12}{0}{4}
+\beamer@sectionintoc {5}{Input file format}{13}{0}{5}
+\beamer@subsectionintoc {5}{1}{Input file format}{13}{0}{5}
+\beamer@subsectionintoc {5}{2}{Input commands}{14}{0}{5}
+\beamer@sectionintoc {6}{Running the Python script}{16}{0}{6}
+\beamer@sectionintoc {7}{The End}{17}{0}{7}

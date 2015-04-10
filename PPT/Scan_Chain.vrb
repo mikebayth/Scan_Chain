@@ -1,0 +1,22 @@
+\frametitle{Scan Chain specifications}
+
+\begin{minted}[fontsize=\footnotesize]{vhdl}
+entity Scan_Chain is
+  generic (
+    in_pins : integer; -- Number of input pins
+    out_pins : integer -- Number of output pins
+  );
+  port (
+    TDI : in std_logic;  -- Test Data In
+    TDO : out std_logic;  -- Test Data Out
+    TMS : in std_logic;  -- TAP controller signal
+    TCLK : in std_logic;  -- Test clock
+    TRST : in std_logic;  -- Test reset
+    dut_in : out std_logic_vector(in_pins-1 downto 0);
+     -- Input for the DUT
+    dut_out : in std_logic_vector(out_pins-1 downto 0);
+     -- Output from the DUT
+  );
+end Scan_Chain;
+\end{minted}
+

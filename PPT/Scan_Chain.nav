@@ -1,0 +1,69 @@
+\beamer@endinputifotherversion {3.24pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Scan Chain}}\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\slideentry {1}{1}{1}{2/2}{Scan Chain}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{3}{JTAG}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{2}{1}{3/3}{JTAG}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {2}{Test Setup}{4}{Test Setup}{0}}
+\headcommand {\beamer@sectionpages {2}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Test Setup}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\slideentry {2}{1}{1}{4/4}{Test Setup}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {2}{1}{2}{5/5}{Test Setup}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {2}{1}{3}{6/6}{Test Setup}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\sectionentry {3}{Adding scan chain to your exisitng VHDL design}{7}{Adding scan chain to your exisitng VHDL design}{0}}
+\headcommand {\beamer@sectionpages {4}{6}}
+\headcommand {\beamer@subsectionpages {4}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{Adding scan chain}}\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\slideentry {3}{1}{1}{7/7}{Adding scan chain}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {3}{1}{2}{8/8}{Adding scan chain}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{9}{Scan Chain specifications}}\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\slideentry {3}{2}{1}{9/9}{Scan Chain specifications}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {3}{2}{2}{10/10}{Scan Chain specifications}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{11}{Reference Implementation}}\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\slideentry {3}{3}{1}{11/11}{Reference Implementation}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {4}{Hardware Interfacing}{12}{Hardware Interfacing}{0}}
+\headcommand {\beamer@sectionpages {7}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {4}{0}{2}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\sectionentry {5}{Input file format}{13}{Input file format}{0}}
+\headcommand {\beamer@sectionpages {12}{12}}
+\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{13}{Input file format}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\slideentry {5}{1}{1}{13/13}{Input file format}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{14}{Input commands}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {5}{2}{1}{14/14}{Input commands}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {5}{2}{2}{15/15}{Input commands}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\sectionentry {6}{Running the Python script}{16}{Running the Python script}{0}}
+\headcommand {\beamer@sectionpages {13}{15}}
+\headcommand {\beamer@subsectionpages {14}{15}}
+\headcommand {\slideentry {6}{0}{3}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\sectionentry {7}{The End}{17}{The End}{0}}
+\headcommand {\beamer@sectionpages {16}{16}}
+\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {7}{0}{4}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@partpages {1}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@documentpages {17}}
+\headcommand {\def \inserttotalframenumber {17}}
