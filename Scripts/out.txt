@@ -1,2 +1,7 @@
 Expected Output    Received Output   Remarks
 ============================================
+00000001    00000001   Success
+10101011    00000011   Failure
+00000100    00000100   Success
+01100110    00000101   Failure
+00000110    00000110   Success

@@ -92,13 +92,16 @@ for comm in input_file.readlines():
 		
 		for single in list(command_out):
 			dev.write(2,single,100)
-			time.sleep(3)
+			time.sleep(0.2)
 		print "Successfully entered the input.."
 		
 	elif command[0] == "RUNTEST":
-		time_sec = int(command[1]) #*3
+		if command[1] == "MSEC":
+			time_msec = float(command[1]*0.001)
+		elif command[1] == "SEC":
+			time_sec = int(command[1])
 		dev.write(2,'A',100)		
-		time.sleep(5)
+		time.sleep(0.2)
 		print"Applying input.."
 		print "Waiting for execution to end.."
 		# setup toolbar
@@ -106,8 +109,13 @@ for comm in input_file.readlines():
 		sys.stdout.flush()
 		sys.stdout.write("\b" * (41)) # return to start of line, after '['
 		
+		
 		for i in xrange(40):
-			time.sleep(time_sec/40) # do real work here
+			if command[1] == "MSEC":
+				time.sleep(time_msec*0.001/40) # do real work here
+			elif command[1] == "SEC":
+				time.sleep(time_sec/40) # do real work here
+			
 			# update the bar
 			sys.stdout.write("-")
 			sys.stdout.flush()
@@ -117,10 +125,10 @@ for comm in input_file.readlines():
 		# Scan out the data if needed
 		if ( mask_int != 0 ):
 			dev.write(2,'S',100)
-			time.sleep(5)
+			time.sleep(0.2)
 			dev.write(2,chr(out_pins),100)
 			print "Sampling out data.."
-			time.sleep(out_pins*3)
+			time.sleep(out_pins*1)
 			inn = dev.read(0x81,512,100)
 			inn = inn [0:out_pins]
 			valid = 1
@@ -131,7 +139,7 @@ for comm in input_file.readlines():
 			while (valid != 1):
 				# print "Error occured, requesting again.."
 				dev.write(2,'R',100)
-				time.sleep(5)
+				time.sleep(0.4)
 				inn = dev.read(0x81,512,100)
 				inn = inn [0:out_pins]
 				valid = 1
