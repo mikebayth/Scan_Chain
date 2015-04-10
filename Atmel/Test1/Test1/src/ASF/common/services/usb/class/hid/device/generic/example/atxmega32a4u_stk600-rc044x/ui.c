@@ -47,6 +47,7 @@
 #include <stdlib.h>
 
 uint8_t hid_report[UDI_HID_REPORT_IN_SIZE], prv_report[UDI_HID_REPORT_IN_SIZE];
+uint8_t recvd_data[UDI_HID_REPORT_IN_SIZE], sndng_data[UDI_HID_REPORT_IN_SIZE];
 
 uint16_t count = 0, length = 0;
 char state[3] = "IDL";
@@ -59,7 +60,11 @@ void ui_init(void)
 	ioport_set_pin_dir(TDI, IOPORT_DIR_OUTPUT);
 	ioport_set_pin_dir(TCLK, IOPORT_DIR_OUTPUT);
 	ioport_set_pin_dir(TDO, IOPORT_DIR_INPUT);
-		
+	ioport_set_pin_dir(DMY0, IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(DMY1, IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(DMY2, IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(DMY3, IOPORT_DIR_INPUT);
+	
 	LED_On(LED0_GPIO);
 	LED_Off(LED1_GPIO);
 	LED_Off(LED2_GPIO);
@@ -72,7 +77,10 @@ void ui_init(void)
 	ioport_set_pin_level(TRST, HIGH);
 	ioport_set_pin_level(TMS, LOW);
 	ioport_set_pin_level(TCLK, LOW);
-	
+	ioport_set_pin_level(DMY0, LOW);
+	ioport_set_pin_level(DMY1, LOW);
+	ioport_set_pin_level(DMY2, LOW);
+	ioport_set_pin_level(DMY2, LOW);
 }
 
 void ui_powerdown(void)
@@ -137,22 +145,21 @@ void ui_process(uint16_t framenumber )
 	
 }
 
-void delay(int time_in_ms)
+void delay(int time_in_us)
 {
-	int i,k,l;
+	int i,l;
 	
-	for (i=0;i<= time_in_ms; i++)
+	for (i=0;i<= time_in_us; i++)
 	{
-		for (k=0; k <= 100; k++ )
-		for (l=0; l <= 1000; l++ );
+		for (l=0; l <= 300; l++ );
 	}
 	
 }
                                                                                                                                                                                                                            
 void ui_led_change(uint8_t *report)
 {
-	int out_pins = 0, line = 0;
-	
+	int out_pins = 0, line = 0, k = 0, l = 0;
+	int loc = 0, glob = 0;
 	ioport_set_pin_level(TRST, LOW);
 	
 	if (strcmp(state,"IDL") == 0)
@@ -218,6 +225,12 @@ void ui_led_change(uint8_t *report)
 		strcpy(state,"LEN");
 		ioport_set_pin_level(TCLK, HIGH);
 		count = 0;
+		glob = 0;
+		for ( l = 0; l < length ; l++)
+		{
+			recvd_data[l] = '0';
+		}
+		
 	}
 	else if (strcmp(state,"LEN") == 0)
 	{
@@ -225,11 +238,13 @@ void ui_led_change(uint8_t *report)
 		{	
 			LED_On(LED1_GPIO);
 			ioport_set_pin_level(TDI, HIGH);
+			recvd_data[glob++] = '1';
 		}
 		else if (report[0] == '0')
 		{
 			LED_Off(LED1_GPIO);
 			ioport_set_pin_level(TDI, LOW);
+			recvd_data[glob++] = '0';
 		}
 		ioport_set_pin_level(TMS, LOW);
 		ioport_set_pin_level(TCLK, LOW);
@@ -240,17 +255,45 @@ void ui_led_change(uint8_t *report)
 		if (count >= length)
 		{
 			count = 0;
+			recvd_data[glob] = '\0';
 			strcpy(state,"IDL");
 		}
 	}
 	else if (strcmp(state,"SMP") == 0)
 	{
-		
-		out_pins = report[0];
+		loc = 0;
+		if ( report[0] >= length )
+		{
+			out_pins = report[0];
+			for ( k = 0; k < report[0]; k++ )
+			{
+				if ( k >= (report[0] - length) )	{
+					sndng_data[k] = recvd_data[loc++];
+					
+				}
+				else
+				{
+					sndng_data[k] = '0';
+				}
+			}
+		}
+		else
+		{
+			out_pins = length;
+		}
 		line=0 ;
-		ioport_set_pin_level(TDI, LOW);
+		
 		while ( line < out_pins )
 		{
+			if ( sndng_data[line] == '1')
+			{
+				ioport_set_pin_level(TDI, HIGH);
+			}
+			else if ( sndng_data[line] == '0')
+			{
+				ioport_set_pin_level(TDI, LOW);
+			}
+			//ioport_set_pin_level(TDI, LOW);
 			if (ioport_get_pin_level(TDO)== 0)
 			{
 				hid_report[line] = 0x30;

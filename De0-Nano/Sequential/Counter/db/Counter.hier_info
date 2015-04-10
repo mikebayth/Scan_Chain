@@ -13,10 +13,10 @@ LED[4] << Count:DUT.count[4]
 LED[5] << Count:DUT.count[5]
 LED[6] << Count:DUT.count[6]
 LED[7] << Count:DUT.count[7]
-dummy[0] << <GND>
-dummy[1] << <GND>
-dummy[2] << <GND>
-dummy[3] << <GND>
+dummy[0] => ~NO_FANOUT~
+dummy[1] => ~NO_FANOUT~
+dummy[2] => ~NO_FANOUT~
+dummy[3] => ~NO_FANOUT~
 
 
 |Counter|Scan_Chain:SC
